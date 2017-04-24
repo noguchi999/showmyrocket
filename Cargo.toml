@@ -1,0 +1,21 @@
+[package]
+name = "showmyrockets"
+version = "0.1.0"
+authors = ["Osamu Noguchi <noguchi@headwaters.co.jp>"]
+
+[dependencies]
+rocket = { path = "../Rocket/lib" }
+rocket_codegen = { path = "../Rocket/codegen" }
+
+serde = "0.9"
+serde_json = "0.9"
+serde_derive = "0.9"
+r2d2 = "0.7"
+diesel = { version = "0.12", features = ["sqlite"] }
+diesel_codegen = { version = "0.12", features = ["sqlite"] }
+r2d2-diesel = "0.12"
+
+[dependencies.rocket_contrib]
+path = "../Rocket/contrib"
+default_features = false
+features = [ "json" ]
